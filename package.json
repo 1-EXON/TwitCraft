@@ -1,0 +1,24 @@
+{
+  "name": "TwitCraft",
+  "version": "1.0.0",
+  "description": "Playing Minecraft to use chatting on Twitch",
+  "main": "src/index.ts",
+  "repository": "https://github.com/1-EXON/TwitCraft",
+  "author": "시혁 박 <exon.indiv@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^14.11.2",
+    "@types/tmi.js": "^1.8.1",
+    "gts": "^3.1.0",
+    "typescript": "^4.0.3"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "prepare": "npm.cmd run compile",
+    "pretest": "npm.cmd run compile",
+    "posttest": "npm.cmd run lint"
+  },
+  "dependencies": {
+    "tmi.js": "^1.8.5"
+  }
+}
