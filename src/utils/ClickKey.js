@@ -1,8 +1,10 @@
 const robot = require('robotjs')
 
-export default function ClickKey(keyType, clickTime) {
+function clickKey(keyType, clickTime) {
     robot.keyToggle(keyType, 'down')
 	setTimeout(() => {
-		robot.keyToggle('w', 'up')
+		robot.keyToggle(keyType, 'up')
 	}, clickTime)
 }
+
+exports.clickKey = clickKey
