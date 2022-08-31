@@ -29,29 +29,13 @@ class App {
 			const msgList = message.toLowerCase().split(' ')
 
 			if (msgList[0] === '!forward' || msgList[0] === '!fd') {
-				if (msgList.length > 1) {
-					clickKey('w', parseInt(msgList[1]))
-				} else {
-					clickKey('w', 100)
-				}
+				executeDefaultKey('w')
 			} else if (msgList[0] === '!backward' || msgList[0] === '!bd') {
-				if (msgList.length > 1) {
-					clickKey('s', parseInt(msgList[1]))
-				} else {
-					clickKey('s', 100)
-				}
+				executeDefaultKey('s')
 			} else if (msgList[0] === '!left' || msgList[0] === '!lt') {
-				if (msgList.length > 1) {
-					clickKey('a', parseInt(msgList[1]))
-				} else {
-					clickKey('a', 100)
-				}
+				executeDefaultKey('a')
 			} else if (msgList[0] === '!right' || msgList[0] === '!rt') {
-				if (msgList.length > 1) {
-					clickKey('d', parseInt(msgList[1]))
-				} else {
-					clickKey('d', 100)
-				}
+				executeDefaultKey('d')
 			} else if (msgList[0] === '!space' || msgList[0] === '!sp' || msgList[0] === '!jump') {
 				clickKey('space', 10)
 			} else if (msgList[0] === '!run') {
@@ -64,6 +48,14 @@ class App {
 				}
 			}
 		})
+	}
+
+	executeDefaultKey(key) {
+		if (msgList.length > 1) {
+			clickKey(key, parseInt(msgList[1]))
+		} else {
+			clickKey(key, 100)
+		}
 	}
 }
 
